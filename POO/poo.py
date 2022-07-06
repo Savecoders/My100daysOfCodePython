@@ -63,8 +63,8 @@ class Soda(Drink, Product):
         self.__brand = brand
         self.__sugar = sugar
 
-    def getDetails(self):
-        return super().getDetails() + " of the brand: " + self.__brand + " the sugar: " + str(self.__sugar)
+    def getDetails(self, text=""):
+        return text + super().getDetails() + " of the brand: " + self.__brand + " the sugar: " + str(self.__sugar)
 
 
 drink = Drink("agua")
