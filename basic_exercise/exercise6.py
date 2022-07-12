@@ -1,7 +1,6 @@
 # read the file.txt, get names and return
 # number of times it repeats
 
-import pandas as pd
 import json
 
 def read_file(filename: str) -> list[str]:
