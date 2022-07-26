@@ -1,0 +1,36 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background: #ffffff;
+  padding: 50px;
+  margin: 50px;
+}
+
+.formulate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 20em;
+  height: 20em;
+  border-radius: 0.9rem;
+  background-color: aliceblue;
+}
+
+label input {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.buttons {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #72b5da;
+  color: white;
+  width: 5rem;
+  height: 2.5rem;
+  border-radius: 0.3rem;
+}

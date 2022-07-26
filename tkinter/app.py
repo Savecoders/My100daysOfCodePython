@@ -3,6 +3,16 @@
 from tkinter import *
 # called root Tk
 
+import mysql.connector
+
+
+midb = mysql.connector.connect(
+    host='localhost',
+    user='savecode',
+    password='0986778998Salva!',
+    database='sql_test',
+)
+
 root = Tk()
 
 # Enterside value
