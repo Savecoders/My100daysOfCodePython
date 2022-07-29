@@ -16,6 +16,11 @@ def create_app():
     
     db.init_app(app)
 
+    from . import auth
+
+    # generate blueprint
+    app.register_blueprint(auth.bp)
+
     @app.route('/message')
     def message():
         return 'Hello World!'
