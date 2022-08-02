@@ -17,9 +17,11 @@ def create_app():
     db.init_app(app)
 
     from . import auth
+    from . import todo
 
     # generate blueprint
     app.register_blueprint(auth.bp)
+    app.register_blueprint(todo.bp)
 
     @app.route('/message')
     def message():
