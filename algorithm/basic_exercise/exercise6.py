@@ -1,6 +1,6 @@
 # read the file.txt, get names and return
 # number of times it repeats
-
+import pandas as pd
 import json
 
 def read_file(filename: str) -> list[str]:
@@ -30,7 +30,7 @@ def getDictNames(list_names: list[str]) -> dict:
     last_name[list_names[i][2]] = colapsedNames(last_name, list_names, i, 2)
 
   return {
-    "Names": first_name,
+    "FirstName": first_name,
     "Middle_names": middle_name,
     "Last_names": last_name
   }
@@ -41,8 +41,12 @@ file = read_file("to.txt")
 list_names = separedNames(file)
 dict_names = getDictNames(list_names)
 
-print(dict_names)
+# print(dict_names)
 
-#print(json.dumps(dict_names, sort_keys=False, indent=len(list_names)))
+# print(json.dumps(dict_names, sort_keys=False, indent=len(list_names)))
 
-#print(pd.DataFrame(list_names, columns=['name', 'middle_name', 'last_name']))
+dataFrame = pd.DataFrame(dict_names)
+
+dataFrame.fillna(0)
+
+print(dataFrame.fillna(0))
