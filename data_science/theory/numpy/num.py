@@ -11,7 +11,8 @@ print(a.ndim)
 
 # a is array of two dimensions
 
-b = np.array([[[1, 2, 3, 4], [5, 6, 7, 8]], [[9, 10, 11, 12], [13, 14, 15, 0]]])
+b = np.array([[[1, 2, 3, 4], [5, 6, 7, 8]], [
+             [9, 10, 11, 12], [13, 14, 15, 0]]])
 
 # b is array of three dimensions
 print(b.ndim)
@@ -39,7 +40,23 @@ print(arr)
 # because python include the native Solution
 # example: list(range(10))
 
-arr_filter = arr[ (arr<40) & (arr>30) ]
+arr_filter = arr[(arr < 40) & (arr > 30)]
 
 # filter the elements < 40 and >30
 print(arr_filter)
+
+arrayA = np.array([[2, 7], [0, 0]])
+arrayB = np.array([[4, 2], [8, 1]])
+
+# hstack
+hsA = np.hstack((arrayA, arrayB))
+
+print(hsA)
+# the attribute 'hstack' created a array
+# based in data sctructure stack
+
+
+randoms = np.random.rand(100000)
+
+
+

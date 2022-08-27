@@ -13,6 +13,7 @@ from flask.cli import with_appcontext
 
 from .schema import instructions
 
+
 def get_db():
     if 'db' not in g:
         g.db = mysql.connector.connect(
@@ -32,6 +33,7 @@ def close_db(e=None):
     if db is not None:
         db.close()
 
+
 def init_db():
     db, c = get_db()
 
@@ -40,12 +42,14 @@ def init_db():
 
     db.commit()
 
+
 @click.command('init-db')
 # access from envioment vars
 @with_appcontext
 def init_db_command():
     init_db()
     click.echo('Database initialization complete')
+
 
 def init_app(app):
     # execute functions to finally app
