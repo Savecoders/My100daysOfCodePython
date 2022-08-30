@@ -23,6 +23,8 @@ title = box.find('h1').get_text()
 
 plot = box.find('p', class_='plot').get_text(strip=True, separator='')
 
+# the config the files is a plot
+
 # delete spaces using strip
 transcript = box.find(
     'div', class_='full-script').get_text(strip=True, separator='\n')
